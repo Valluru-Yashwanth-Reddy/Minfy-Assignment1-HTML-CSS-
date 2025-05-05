@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+   }
+   .container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+   }
+   .container:hover {
+    transform: scale(1.01);
+   }
+   .profile-pic {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 4px solid #00ffd5;
+    object-fit: cover;
+    margin-bottom: 20px;
+    transition: transform 0.4s ease;
+   }
+   .profile-pic:hover {
+    transform: scale(1.05) rotate(1deg);
+   }
+   h1 {
+    font-size: 2em;
+    font-weight: 600;
+    color: #00ffd5;
+   }
+   h2 {
+    font-size: 1.2em;
+    margin: 10px 0 20px;
+    color: #ffd700;
+   }
+   p {
+    font-size: 1em;
+    line-height: 1.7;
+    color: #e0e0e0;
+    margin-bottom: 25px;
+   }
+   .highlight {
+    color: #00ffd5;
+    font-weight: bold;
+   }
+   .social-links a {
+    margin: 0 10px;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #00ffd5;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.3s;
+   }
+   .social-links a:hover {
+    background-color: #00ffd5;
+    color: #000;
+    transform: scale(1.05);
+   }
+   @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+   }
+   @media (max-width: 600px) {
+    .container {
+      padding: 30px 20px;
+    }
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+    }
+    h1 {
+      font-size: 1.6em;
+    }
+    h2 {
+      font-size: 1em;
+    }
+   }
