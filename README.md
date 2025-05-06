@@ -24,3 +24,14 @@ so finally created conflicts resolved and pushed it succesfully.
 
  <img width="960" alt="{75D9B4B7-3856-45D8-8EC6-1E4AD0DEA7E6}" src="https://github.com/user-attachments/assets/6dafedc2-65db-44d6-b2fa-750013f92624" />
 
+
+
+
+ HUSKY
+
+ Husky is basically used to run scripts automatically during the git events like pre-commit.
+To enable husky we use << npx husky install >>.
+add a pre-commit hook we use command << npx husky add .husky/pre-commit "precommit hook" 
+now we create an errors javascriptfile. then we add this using git add . And commit with git commit -m "bad error".then here the lint-staged runs ESlint and sees issues in the code.the pre-commit hook blocks the commit.then,commitlint checks the message.the commit fails again.
+Now to run auto-fix code errors and linting we run << npx prettier --write . And << npx eslint --fix .  .
+here we should try a proper message format with command << git commit -m "fix: corrected formatting and lint errors".then now the commit will get success the code is checked automatically whenever it is pushed to github basically it auto checks the code whenever you push and it helps catch issues in Ci.
